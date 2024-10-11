@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: weather_and_transportation
+    database: de-project-pulumi
+    schema: weather_and_transportation
+    tables:
+      - name: weather_conditions
+        columns:
+          - name: time
+            tests:
+              - not_null
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: velib_stations
+        columns:
+          - name : station_id
+            tests:
+              - unique
+              - not_null
+      - name: velib_stations_status
+        columns:
+          - name: uuid
+            tests:
+              - not_null
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: metro_lines
+      - name: metro_stations
+      - name: metro_lines_status
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+
+                  

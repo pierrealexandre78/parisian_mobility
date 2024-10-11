@@ -1,0 +1,15 @@
+secrets/*
+.python-version
+.env
+requirements.txt
+*__pycache__*
+gcp_config.json
+src/cron/*
+service_account_bobby_key.json
+service_account_key.json
+# as of now do not commit pulumi setings
+infra/Pulumi.yaml
+airflow/logs/*
+*.egg-info
+.vscode/
+

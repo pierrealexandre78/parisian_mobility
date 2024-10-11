@@ -1,0 +1,12 @@
+name: my-pulumi-project-name
+runtime:
+  name: python
+description: Data Engineering Project
+config:
+  gcp:project: my-gcp-project-name
+  gcp:region: europe-west4
+  gcp:zone: europe-west4-a
+  vm:machineType: e2-standard-4
+  vm:osImage: ubuntu-2004-focal-v20240830
+  vm:diskSizeGb: 100
+  vm:diskType: pd-standard

@@ -1,0 +1,14 @@
+dbt-bigquery-profile:
+  outputs:
+    dev:
+      dataset: visualization
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: service_account_key.json
+      location: europe-west9
+      method: service-account
+      priority: interactive
+      project: de-project-pulumi
+      threads: 10
+      type: bigquery
+  target: dev

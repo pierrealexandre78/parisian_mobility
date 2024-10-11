@@ -1,0 +1,11 @@
+# you shouldn't commit these into source control
+target/
+dbt_packages/
+logs/
+serviceaccount_bobby_key.json
+.dbt/
+*.bak
+.user.yml
+package-lock.yml
+profiles.yml
+

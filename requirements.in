@@ -1,0 +1,17 @@
+google-cloud-storage
+google-cloud-bigquery
+google-api-core
+ipykernel
+datetime
+requests
+pandas
+black
+pylint
+pulumi
+pulumi-gcp
+pulumi_google_native
+streamlit
+db-dtypes
+folium
+dbt-core
+dbt-bigquery
